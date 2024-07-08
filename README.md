@@ -6,3 +6,4 @@
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=xzx01299)](https://solved.ac/xzx01299/)
 </div>
+
