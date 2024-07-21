@@ -11,6 +11,7 @@ package main.class2;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class Q10816시간초과 {
@@ -21,27 +22,29 @@ public class Q10816시간초과 {
         StringBuilder sb = new StringBuilder();
 
 
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-        int num = Integer.parseInt(br.readLine());
-        ArrayList<Integer> list = new ArrayList<>();
+        int testCase = Integer.parseInt(br.readLine());
+
         st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < num; i++) {
-            list.add(Integer.parseInt(st.nextToken()));
+
+        for (int i = 0; i < testCase; i++) {
+            int key = Integer.parseInt(st.nextToken());
+
+            map.put(key, map.getOrDefault(key, 0) + 1);
         }
 
-        int have = Integer.parseInt(br.readLine());
-        int[] haves = new int[num];
+        int needAmount = Integer.parseInt(br.readLine());
+
         st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < have; i++) {
-            int have_card = Integer.parseInt(st.nextToken());
-            for (Integer value : list) {
-                if (value == have_card) {
-                    haves[i] += 1;
-                }
-            }
-            sb.append(haves[i]).append(" ");
+
+        for (int i = 0; i < needAmount; i++) {
+            int key = Integer.parseInt(st.nextToken());
+
+            sb.append(map.getOrDefault(key, 0)).append(" ");
         }
 
+        
         System.out.println(sb);
     }
 }
