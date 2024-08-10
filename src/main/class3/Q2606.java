@@ -2,7 +2,7 @@
     Date: 2024.08.09
     No: 2606번
     Tier: 실버 III
-    Name: 최소 힙
+    Name: 바이러스
     Language: Java17
 */
 

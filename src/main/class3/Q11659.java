@@ -11,12 +11,9 @@ package main.class3;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Q11659 {
-
-    static int count;
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -29,25 +26,29 @@ public class Q11659 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
+        int value = 0;
+        int sum = 0;
+        int[] arr = new int[N];
+
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            list.add(Integer.parseInt(st.nextToken()));
+            value = Integer.parseInt(st.nextToken());
+            sum += value;
+            arr[i] = sum;
+            list.add(value);
         }
 
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
-            int num1 = Integer.parseInt(st.nextToken())-1;
+            int num1 = Integer.parseInt(st.nextToken()) - 1;
             int num2 = Integer.parseInt(st.nextToken()) - 1;
-            int sum = 0;
 
-            if (num1 == num2) {
-                sb.append(list.get(num1)).append("\n");
+            if (num1 == 0) {
+                sb.append(arr[num2]).append("\n");
             } else {
-                for (int j = num1; j <= num2; j++) {
-                    sum += list.get(j);
-                }
-                sb.append(sum).append("\n");
+                sb.append(arr[num2] - arr[num1-1]).append("\n");
             }
+
         }
         System.out.println(sb);
     }

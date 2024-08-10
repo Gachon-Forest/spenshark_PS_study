@@ -1,5 +1,5 @@
 /*
-    Date: 2024.07.09
+    Date: 2024.07.21
     No: 10816번
     Tier: 실버 IV
     Name: 카드2
@@ -10,7 +10,6 @@ package main.class2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
@@ -31,7 +30,7 @@ public class Q10816 {
         for (int i = 0; i < testCase; i++) {
             int key = Integer.parseInt(st.nextToken());
 
-            map.put(key, map.getOrDefault(key, 0) + 1);
+            map.put(key, map.getOrDefault(key, 0) + 1); // value 가 있으면 value, 없으면 0
         }
 
         int needAmount = Integer.parseInt(br.readLine());
@@ -44,7 +43,7 @@ public class Q10816 {
             sb.append(map.getOrDefault(key, 0)).append(" ");
         }
 
-        
+
         System.out.println(sb);
     }
 }

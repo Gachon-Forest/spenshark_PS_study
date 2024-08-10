@@ -1,8 +1,8 @@
 /*
-    Date: 2024.07.09
-    No: 10816번
-    Tier: 실버 IV
-    Name: 숫자 카드2
+    Date: 2024.07.21
+    No: 11650번
+    Tier: 실버 V
+    Name: 좌표 정렬하기
     Language: Java17
 */
 
@@ -12,7 +12,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class Q11650 {
